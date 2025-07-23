@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!--FONT AWESOME ICONS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Nostra</title>
+
+</head>
+
+<body>
+<!--My CSS-->
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.title-text {
+    display: flex;
+    height: auto;
+    width: 10%;
+    margin: 10px;
+    object-fit: contain;
+}
+
+.navbar-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #1d232c;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #1d232c;
+}
+
+.navbar-menu-toggle {
+    display: none;
+}
+
+/*side navbar*/
+
+.side-navbar {
+    background-color: #1d232c;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 0.8s;
+
+}
+
+.side-navbar-link {
+    margin-bottom: 30px;
+
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    
+}
+
+.header-button {
+    padding: 10px 20px 10px 20px ;
+    margin-top: 10px;
+    background-color: #1d232c;
+    color: white;
+}
+
+
+.header img{
+    height: 300px;
+}
+
+.service {
+    padding: 20px;
+}
+
+.service-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.service-container-2 div {
+    background-color: #f2f4f7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.new-arrival {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.new-arrival-container {
+    position: relative;
+    flex-basis: 20%;
+}
+
+.new-arrival img {
+    width: 300px;
+}
+
+.new-arrival button {
+    padding: 5% 10% 5% 10%;
+    margin-top: 10px;
+    color: black;
+    position:absolute;
+    top: 50%;
+    left: 20%;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input {
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+
+.news button {
+    margin-top: 10px;
+    color: #f2f4f7;
+    background-color: #1d232c;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: #f2f4f7;
+
+}
+
+.footer-icon-container i{
+    padding: 5px;
+}
+
+/*COLLECTION*/
+
+.product-section {
+    margin-top: 20px;
+}
+
+.product-search {
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.product-search input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.product-search input:focus {
+    outline: none;
+}
+
+.products {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.products-box {
+    text-align: center;
+    flex-basis: 20%;
+}
+
+.products-box img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+/*CONTACT*/
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(to right, #1d232c,#2c4366);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 2% 35%;
+    
+
+}
+
+.contact-container {
+    color: #f2f4f7;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-container h2{
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input {
+    margin-bottom: 20px;
+    padding:10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    margin-bottom: 20px;
+    padding:30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,textarea:focus {
+    outline: none;
+    border: 2px solid #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: #f2f4f7;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #56b7f7;
+}
+
+/*media queries*/
+
+@media screen and (max-width:600px) {
+    .navbar-menu-toggle{
+        display: block;
+}
+
+    .title-text {
+        height: auto;
+        width: 30%;
+    }
+
+    .navbar-links{
+        display: none;
+    }
+
+    .header-image{
+        display: none;
+    }
+
+    .service-container-1 {
+        display: none;
+    }
+
+    .service-container-2 {
+        flex-direction: column;
+    }
+
+    .new-arrival button {
+        left: 27%;
+    }
+
+    .contact-section {
+         margin: 2% 10%;
+    }
+}
+
+
+
+    </style>
+
+    <!--navbar-->
+    <nav class="navbar">
+        <img class="title-text" src="ve-staro.png">
+
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!--side navbar-->
+
+    <div class="side-navbar" >
+        <p style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+    </div>
+
+<!--Contact-->
+
+<div class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <div class="contact-input">
+            <form>
+            <p>Name :</p>
+            <input type="text" id="name">
+            </form>
+        </div>
+
+        <div class="contact-input">
+            <form>
+            <p>Email :</p>
+            <input type="email" id="email">
+            </form>
+        </div>
+
+        <div class="contact-input">
+            <form>
+            <p>Message :</p>
+            <textarea name="text" id="message"></textarea>
+            </form>
+            <button class="submit-btn">Submit</button>
+        </div>
+        
+    </div>
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+            <h2 class="heading-text">Vestaro</h2>
+            <p>Built for the Modern Man. Designed with Purpose.</p>
+        </div>
+        <div class="footer-icon-container">
+            <p>Follow us on:</p>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter"  style="color: #ffffff;"></i>
+            <i class="fa-brands fa-facebook"  style="color: #ffffff;"></i>
+        </div>
+    </div>
+    <p>@2025 Vestaro. All Rights Recieved.</p>
+</div>
+
+
+<script src="contact.js"></script>
+</body>
+</html>

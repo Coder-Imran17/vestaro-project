@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!--FONT AWESOME ICONS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Vestaro</title>
+    <link rel="icon" type="image/png" href="Asset 3.png">
+
+</head>
+
+<body>
+<!--My CSS-->
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.title-text {
+    height: auto;
+    width: 10%;
+    margin: 10px;
+    object-fit: contain;
+}
+
+
+.navbar-links {
+    margin-right: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #1d232c;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #1d232c;
+}
+
+.navbar-menu-toggle {
+    display: none;
+
+}
+
+/*side navbar*/
+
+.side-navbar {
+    background-color: #1d232c;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 0.8s;
+    z-index: 5;
+}
+
+.side-navbar-link {
+    margin-bottom: 30px;
+
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+
+}
+
+/*HERO STYLES*/
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+   
+}
+
+/*Slider*/
+.hero-slider{
+ 
+    display: flex;
+    height: 100%;
+    width: 300%;
+    animation: slide 15s infinite;
+}
+
+.slide {
+    flex: 0 0 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Text on top*/
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    margin-top: 1rem;
+    
+}
+
+.hero-content p{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1, .hero-content p {
+    text-shadow:  2px 2px 2px #1d232c;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.hero-button {
+    display: inline-block;
+    background: #3498db;
+    padding: 12px 24px;
+    border: none;
+    color: #f2f4f7;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+    background:linear-gradient(to right, #1d232c,#2c4366);
+}
+
+/*KEYFRAMES*/
+
+@keyframes slide {
+    0%{transform: translate(0);}
+    33%{transform: translate(-100%);}
+    66%{transform: translate(-200%);}
+    100%{transform: translate(0);}
+}
+
+
+.service {
+    padding: 20px;
+}
+
+.service-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.service-container-1 p{
+    margin-top: 40px;
+}
+
+.service-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-container-2 img {
+    margin-left: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 20%;
+}
+
+
+
+.service-container-2 h4, .service-container-2 p {
+    text-align: center;
+}
+
+.service-container-2 p {
+    margin-top: 10px;
+}
+
+.service-container-2 div {
+    background-color: #f2f4f7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.shop-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hides button by default */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background-color: white;
+    color:#1d232c;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-button:hover {
+    background:  linear-gradient(to right, #1d232c,#2c4366);
+    color: #f2f4f7;
+    transition: 0.3s;
+    
+}
+    /* Shows button only on hover */
+.new-arrival-container:hover .shop-button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*News*/
+
+.new-arrival {
+    display: flex;
+    justify-content: space-around; /* This will give even space around the images */
+    flex-wrap: wrap;
+    padding:0 10px; /* Keeps away from the edges slightly */
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.new-arrival-container {
+    position: relative;
+    flex-basis: 20%;
+    width: 24%;  /* Tighter fit for 4 in a row */
+    min-width: 200px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents image from overflowing on */
+    width: 100px;
+    margin: 10px;
+}
+
+.new-arrival img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    height: auto;
+    transition:  transform 0.4s ease;
+    
+}
+
+.new-arrival-container:hover img {
+    transform: scale(1.3);  /* Zooms the image only */
+}
+
+.new-arrival i{
+    margin: 5px;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input {
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+    border-radius: 15px;
+}
+
+.news button {
+    background-color: #3498db;
+    color: #f2f4f7;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.news button:hover { 
+    background:  linear-gradient(to right, #1d232c,#2c4366);
+    color: #f2f4f7;
+}
+
+
+/*Footer*/
+
+.footer {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: #f2f4f7;
+
+}
+
+.footer-icon-container i{
+    padding: 5px;
+}
+
+
+/*media queries*/
+
+
+    /* Mobile View-1 Image in a row(below 600px) */
+@media screen and (max-width:600px) {
+    .navbar-menu-toggle{
+        display: block;
+}
+
+    .title-text {
+        height: auto;
+        width: 30%;
+    }
+
+    .hero  {
+        height: 60vh;
+    }
+
+    .hero-content h1{
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+
+    .navbar-links{
+        display: none;
+    }
+
+    .header-image{
+        display: none;
+    }
+
+    .service-container-1 {
+        display: none;
+    }
+
+    .new-arrival-container {
+        width: 100%;
+    }
+
+    .service-container-2 {
+        flex-direction: column;
+    }
+
+    .new-arrival button {
+        left: 27%;
+    }
+}
+
+    /* Tablet view - 2 Images in a row(600-900) */
+@media screen and (max-width:900px) {
+    .new-arrival-container{
+        width: 48%;
+        flex-basis: 40%;
+    }
+}
+    /* ABOVE 900PX WILL USED FOR DESKTOP VIEW */
+
+    </style>
+
+    <!--navbar-->
+    <nav class="navbar">
+        
+        <img class="title-text" src="ve-staro.png">
+
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!--side navbar-->
+
+    <div class="side-navbar" >
+        <p style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+    </div>
+
+    <!--HERO SECTION-->
+
+    <div class="hero">
+        <div class="hero-slider">
+
+            <div class="slide" style="background-image: url('hero-images/unsplash1.jpg');"></div>
+            <div class="slide" style="background-image: url('hero-images/shirt-mockup-concept-with-plain-clothing.jpg');"></div>
+            <div class="slide" style="background-image: url('hero-images/hanging-shirts.jpg');"></div>
+            <div class="slide" style="background-image: url('hero-images/man-with-shirt.jpg');"></div>
+
+        </div>
+
+            <div class="hero-content">
+                <h1>Level up your style</h1>
+                <p>with our stunning collections</p>
+                <a href="collection.html" target="_blank" class="hero-button">Grab Yours Now</a>
+            </div>
+
+    </div>
+
+    <!--service section-->
+    <div class="service">
+        <div class="service-container-1">
+            <div>
+                <h2>We Provide</h2>
+                <h2>Customer Experience</h2>
+            </div>
+
+            <div>
+                <p>|| we ensure that our customer have the best shopping experience</p>
+            </div>
+        </div>
+
+        <div class="service-container-2">
+            <div>
+                <img class="simage-1" src="images-assets/customer-experience.png">
+                <h4>Satisfaction Guarantee</h4>
+                <p>We want you to love what you wear. If you're not 100% satisfied, return your order within 7 days for a full refund or exchange. No hassle, no stress, just smooth shopping you can trust</p>
+            </div>
+
+            <div>
+                <img class="nimage-2" src="images-assets/new-arrival.png">
+                <h4>New Arrival Everyday</h4>
+                <p>Discover fresh fashion daily! We drop new styles every day so you'll always find something new to love. Stay ahead of trends and update your wardrobe with the latest arrivals in men's clothing</p>
+            </div>
+
+            <div>
+                <img class="fimage-3" src="images-assets/courier.png">
+                <h4>Fast and Free Shipping</h4>
+                <p>Enjoy fast and free shipping on all orders across India. No hidden charges, no delays, just quick delivery straight to your door, every time. Because waiting shouldn't be part of our style.</p>
+            </div>
+        </div>
+    </div>
+
+<div>
+    <h2 style="padding: 20px;">New Arrival</h2>
+
+    <div class="new-arrival">
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion1.jpg">
+            <a href="https://www.snitch.com/men-shirts/calista-white-mandarin-shirt/8261038637218/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion2.jpg">
+            <a href="https://www.snitch.com/men-shirts/mini-neckline-maroon-shirt/8090378797218/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion3.jpg">
+            <a href="https://www.snitch.com/men-shirts/stripehaven-beige-striped-shirt/8332312084642/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion4.jpg">
+            <a href="https://www.amazon.in/Snitch-Black-Textured-Rayon-Shirt/dp/B0D5DPJFGW" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <h2 style="padding: 20px;">Most Popular</h2>
+
+    <div class="new-arrival">
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion6.jpg">
+            <a href="https://www.snitch.com/men-t-shirts/100-cotton-regular-fit-polo-stripes-zippered-t-shirt-4mst2728-02/8711809958050/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion7.jpg">
+            <a href="https://www.snitch.com/men-shirts/cuban-collar-geometric-regular-fit-shirt-4mss4135-02/8704214565026/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion9.jpg">
+            <a href="https://www.snitch.com/men-t-shirts/stretch-slim-fit-polo-textured-t-shirt-4mst2822-03/8715965956258/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion10.jpg">
+            <a href="https://www.snitch.com/men-shirts/cuban-collar-abstract-regular-fit-shirt-4mss4137-02/8704209223842/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <h2 style="padding: 20px;">Summer in Trousers!</h2>
+
+    <div class="new-arrival">
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion5.jpg">
+            <a href="https://www.snitch.com/men-jeans/heavy-distressed-loose-fit-jeans-4msd4041-03/8698063650978/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/trouser1.jpg">
+            <a href="https://www.snitch.com/men-trousers/regular-fit-linen-blend-trousers-4msr5390-05/8711797473442/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/trouser2.jpg">
+            <a href="https://www.snitch.com/men-jeans/straight-fit-washed-jeans-4msd4072-01/8709582028962/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+
+        <div class="new-arrival-container">
+            <img src="product-images/fashion8.jpg">
+            <a href="https://www.snitch.com/men-trousers/straight-fit-stretch-trousers-4msr5374-05/8706857959586/buy" target="_blank" class="shop-button">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+    </div>
+</div>
+
+<!--News-->
+<div class="news">
+    <h2>Join Our News Letter</h2>
+    <p>Signup for our email newsletter to get exclusive discounts and updates and more!</p>
+    <div>
+        <input type="text" class="search">
+    </div>
+    <div>
+        <button>Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+            <h2 class="heading-text">Vestaro</h2>
+            <p>Built for the Modern Man. Designed with Purpose.</p>
+        </div>
+        <div class="footer-icon-container">
+            <p>Follow us on:</p>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter"  style="color: #ffffff;"></i>
+            <i class="fa-brands fa-facebook"  style="color: #ffffff;"></i>
+        </div>
+    </div>
+    <p>@2025 Vestaro. All Rights Recieved.</p>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>

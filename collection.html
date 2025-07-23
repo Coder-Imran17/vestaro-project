@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--My CSS-->
+<link rel="stylesheet" href="style.css">
+<!--FONT AWESOME ICONS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Nostra</title>
+
+</head>
+
+<body>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.title-text {
+    height: auto;
+    width: 10%;
+    margin: 10px;
+    object-fit: contain;
+}
+
+
+/* MOBILE VIEW SEARCH BAR */
+.form-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75%;
+    margin-top: 50px;
+}
+
+.product-search-1{
+
+    position:absolute;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+.product-search-input-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 20px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color:#1d232c;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+.product-search-1:hover{
+    width: 500px;
+    cursor: pointer;
+    left: 73%;
+}
+.product-search-1:hover .product-search-input-1{
+    display: block;
+}
+.product-search-1:hover .fa{
+    background: linear-gradient(to right, #1d232c,#2c4366);
+    color: white;
+}
+
+/* SIDE LINK PAGES */
+
+.navbar-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #1d232c;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #1d232c;
+}
+
+/* SIDE TOGGLE OPTION */
+.navbar-menu-toggle {
+    display: none;
+    z-index: 1;
+}
+
+/*side navbar*/
+
+.side-navbar {
+    background-color: #1d232c;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 0.8s;
+
+}
+
+.side-navbar-link {
+    margin-bottom: 30px;
+
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    
+}
+
+.header-button {
+    padding: 10px 20px 10px 20px ;
+    margin-top: 10px;
+    background-color: #1d232c;
+    color: white;
+}
+
+
+.header img{
+    height: 300px;
+}
+
+.service {
+    padding: 20px;
+}
+
+.service-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.service-container-2 div {
+    background-color: #f2f4f7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.new-arrival {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.new-arrival-container {
+    position: relative;
+    flex-basis: 20%;
+}
+
+.new-arrival img {
+    width: 300px;
+}
+
+.new-arrival button {
+    padding: 5% 10% 5% 10%;
+    margin-top: 10px;
+    color: black;
+    position:absolute;
+    top: 50%;
+    left: 20%;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input {
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+
+.news button {
+    margin-top: 10px;
+    color: #f2f4f7;
+    background-color: #1d232c;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: #f2f4f7;
+
+}
+
+.footer-icon-container i{
+    padding: 5px;
+}
+
+
+.product-section {
+    margin-top: 20px;
+}
+
+
+
+.product-search-2 {
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.product-search-2 .product-search-input-2 {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 15px;
+}
+
+.product-search-2 .product-search-input-2:focus {
+    outline: none;
+} 
+
+.products {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.products-box {
+    text-align: center;
+    flex-basis: 20%;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.product-box.hide {
+    opacity: 0;
+    transform:  scale(0.95);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+#no-products {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #444;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform:  translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform:  translateY(0);
+    }
+}
+
+.product-animate {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.products-box img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.category-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #f2f4f7 ;
+    color: #1d232c;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background:  linear-gradient(to right, #1d232c,#2c4366);
+    color: #f2f4f7;
+}
+
+.filter-btn.active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+/*media queries*/
+
+    /* Mobile view */
+@media screen and (max-width:649px) {
+    .navbar-menu-toggle{
+        display: block;
+}
+    .title-text {
+        height: auto;
+        width: 30%;
+    }
+
+    .navbar-links{
+        display: none;
+    }
+
+    .header-image{
+        display: none;
+    }
+
+    .service-container-1 {
+        display: none;
+    }
+
+    .service-container-2 {
+        flex-direction: column;
+    }
+
+    .new-arrival button {
+        left: 27%;
+    }
+    
+    .form-container{
+
+        display: flex;
+        margin-left: 20%;
+        height: auto;
+    }
+    .product-search-1:hover {
+        left: 65%;
+        width: 200px;
+    }
+    .product-search-1 {
+      width: 20%;  
+    }
+
+    .product-search-2{
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width:650px) {
+    .form-container {
+    display: none;
+    }
+
+    .fa {
+        display: none;
+    }
+}
+
+
+    </style>
+
+    <!--navbar-->
+    <nav class="navbar">
+        <img class="title-text" src="ve-staro.png">
+        <div class="form-container">
+            <form class="product-search-1">
+                <input class="product-search-input-1" type="text" id="mobile-search" placeholder="Search..."><i class="fa fa-search"></i>
+            </form>
+        </div>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!--side navbar-->
+
+    <div class="side-navbar" >
+        <p style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+    </div>
+
+
+<!--Search Bar-->
+
+    <div class="product-section">
+        <form class="product-search-2">
+            <input class="product-search-input-2" type="text" id="desktop-search" placeholder="Search..."><i class="fa fa-search"></i>
+        </form>
+
+        <div id="no-products" style="display: none; text-align: center; font-weight: bold;">No products found</div>
+
+         <!--Filter/Category Buttons-->
+
+    <div class="category-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="shirts">Shirts</button>
+        <button class="filter-btn" data-filter="trousers">Trousers</button>
+        <button class="filter-btn" data-filter="tshirts">T-shirts</button>
+        <button class="filter-btn" data-filter="casualshirts">Casual Shirts</button>
+    </div>
+
+
+ <!--Product-->       
+        <div class="products" id="products">
+
+            <div class="products-box" data-category="shirts">
+                <a href="https://www.snitch.com/men-shirts/calista-white-mandarin-shirt/8261038637218/buy" target="_blank" ><img src="product-images/fashion1.jpg" alt="white shirt"></a>
+                <p>White Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="shirts">
+               <a href="https://www.snitch.com/men-shirts/mini-neckline-maroon-shirt/8090378797218/buy" target="_blank" > <img src="product-images/fashion2.jpg" alt="brown shirt"></a>
+                <p>Brown Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="shirts">
+              <a href="https://www.amazon.in/Snitch-Black-Textured-Rayon-Shirt/dp/B0D5DPJFGW" target="_blank" > <img src="product-images/fashion4.jpg" alt="black shirt"></a>
+                <p>Black Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="shirts">
+               <a href="https://www.snitch.com/men-shirts/stripehaven-beige-striped-shirt/8332312084642/buy" target="_blank"> <img src="product-images/fashion3.jpg" alt="striped shirt"></a>
+                <p>Striped Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="trousers">
+               <a href="https://www.snitch.com/men-jeans/heavy-distressed-loose-fit-jeans-4msd4041-03/8698063650978/buy" target="_blank"> <img src="product-images/fashion5.jpg" alt="jean pant"></a>
+                <p>Jeans Trouser</p>
+            </div>
+
+            <div class="products-box" data-category="trousers">
+              <a href="https://www.snitch.com/men-trousers/straight-fit-stretch-trousers-4msr5374-05/8706857959586/buy" target="_blank">  <img src="product-images/fashion8.jpg" alt="black pant"></a>
+                <p>Black Trouser</p>
+            </div>
+
+            <div class="products-box" data-category="tshirts">
+               <a href="https://www.snitch.com/men-t-shirts/100-cotton-regular-fit-polo-stripes-zippered-t-shirt-4mst2728-02/8711809958050/buy" target="_blank"> <img src="product-images/fashion6.jpg" alt="polo shirt"></a>
+                <p>White Polo T-Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="casualshirts">
+               <a href="https://www.snitch.com/men-shirts/cuban-collar-geometric-regular-fit-shirt-4mss4135-02/8704214565026/buy" target="_blank"> <img src="product-images/fashion7.jpg" alt="casual shirt"></a>
+                <p>Black Casual Pattern Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="tshirts">
+               <a href="https://www.snitch.com/men-t-shirts/stretch-slim-fit-polo-textured-t-shirt-4mst2822-03/8715965956258/buy" target="_blank"> <img src="product-images/fashion9.jpg" alt="polo shirt"></a>
+                <p>Black Polo T-Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="casualshirts">
+               <a href="https://www.snitch.com/men-shirts/cuban-collar-abstract-regular-fit-shirt-4mss4137-02/8704209223842/buy" target="_blank"> <img src="product-images/fashion10.jpg" alt="casual shirt"></a>
+                <p>Grey Casual Pattern Shirt</p>
+            </div>
+
+            <div class="products-box" data-category="trousers">
+               <a href="https://www.snitch.com/men-trousers/olive-slim-fit-pleated-trousers-4msr5225-06/8549061820578/buy" target="_blank"> <img src="product-images/fashion11.jpg" alt="black pant"></a>
+                <p>Green trouser</p>
+            </div>
+
+            <div class="products-box" data-category="casualshirts">
+               <a href="https://www.ajio.com/snitch-tribal-artistry-print-slim-fit-shirt/p/466919574_red" target="_blank"> <img src="product-images/fashion12.jpg" alt="casual shirt"></a>
+                <p>Tribal Pattern Casual Red Shirt</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+            <h2 class="heading-text">Vestaro</h2>
+            <p>Built for the Modern Man. Designed with Purpose.</p>
+        </div>
+        <div class="footer-icon-container">
+            <p>Follow us on:</p>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter"  style="color: #ffffff;"></i>
+            <i class="fa-brands fa-facebook"  style="color: #ffffff;"></i>
+        </div>
+    </div>
+    <p>@2025 Vestaro. All Rights Recieved.</p>
+</div>
+
+
+<script src="collection.js"></script>
+</body>
+</html>
