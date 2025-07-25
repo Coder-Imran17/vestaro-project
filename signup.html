@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--FONT AWESOME ICONS-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Vestaro | Contact Us</title>
+    <title>Vestaro | Sign Up</title>
 
 </head>
 
@@ -76,6 +76,7 @@ body{
     padding: 20px;
     color: white;
     transition: 0.8s;
+    z-index: 5;
 
 }
 
@@ -116,79 +117,7 @@ body{
     height: 300px;
 }
 
-.service {
-    padding: 20px;
-}
 
-.service-container-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.service-container-2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-
-.service-container-2 div {
-    background-color: #f2f4f7;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.new-arrival {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.new-arrival-container {
-    position: relative;
-    flex-basis: 20%;
-}
-
-.new-arrival img {
-    width: 300px;
-}
-
-.new-arrival button {
-    padding: 5% 10% 5% 10%;
-    margin-top: 10px;
-    color: black;
-    position:absolute;
-    top: 50%;
-    left: 20%;
-    border-radius: 10px;
-    border: none;
-
-}
-
-.news{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.news input {
-    padding: 11px;
-    width: 80vw;
-    margin-bottom: 10px;
-    border: solid black 3px;
-}
-
-.news button {
-    margin-top: 10px;
-    color: #f2f4f7;
-    background-color: #1d232c;
-    padding: 10px;
-    border-radius: 10px;
-}
 
 .footer {
     padding: 40px;
@@ -201,122 +130,10 @@ body{
     padding: 5px;
 }
 
-/*COLLECTION*/
 
-.product-section {
-    margin-top: 20px;
-}
 
-.product-search {
-    width: 80%;
-    border: solid black 2px;
-    border-radius: 20px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
 
-.product-search input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-}
-
-.product-search input:focus {
-    outline: none;
-}
-
-.products {
-    padding: 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.products-box {
-    text-align: center;
-    flex-basis: 20%;
-}
-
-.products-box img {
-    border-radius: 10px;
-    width: 300px;
-}
-
-/*CONTACT*/
-
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:  #f2f4f7;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 2% 35%;
-    
-
-}
-
-.contact-container {
-    color: #1d232c;
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-container h2{
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-input p {
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-input {
-    margin-bottom: 20px;
-    padding:10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-textarea {
-    margin-bottom: 20px;
-    padding:30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-input:focus,textarea:focus {
-    outline: none;
-    border: 2px solid #3498db;
-}
-
-button {
-    background-color: #3498db;
-    color: #f2f4f7;
-    padding: 12px;
-    border: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #56b7f7;
-}
+/*SIGN IN AND SIGN UP*/
 
 main {
     background-image: url("images-assets/login.jpg");
@@ -327,6 +144,131 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.auth-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.auth-box {
+    background-color: #f2f4f7;
+    right: 8%;
+    position: relative;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.auth-box h2 {
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box input {
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #f2f4f7;
+    border-radius: 8px;
+    
+}
+
+.auth-box button {
+    padding: 12px;
+    background-color: #1d232c;
+    color: #f2f4f7;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-box button:hover {
+    background-color: #1d232c;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.input-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 35%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #1d232c;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 10px 0 10px 36px;
+    border: 1px solid #f2f4f7;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d232c;
+    margin: 1.2rem;
+}
+/*DIVIDER LINE*/
+.divider::before, 
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #1d232c;
+    margin: 0 10px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-login i {
+    width: 28px;
+    cursor: pointer;
+    color: #1d232c;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #1995e2;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /*media queries*/
@@ -349,28 +291,52 @@ main {
         display: none;
     }
 
-    .service-container-1 {
-        display: none;
-    }
-
-    .service-container-2 {
-        flex-direction: column;
-    }
-
-    .new-arrival button {
-        left: 27%;
-    }
-
-    .contact-section {
-         margin: 2% 10%;
-    }
-
     .main {
         background-image: none;
         min-height: 100vh;
         padding: 40px 1rem;
         background: #f2f4f7;
     }
+    
+    .auth-box {
+        width: 100%;
+        max-width: 100%;
+        background: #f2f4f7;
+        border-radius: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .auth-logo img {
+        width: 60px;
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    .auth-box h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .auth-box input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .auth-box button {
+        padding: 10px;
+        font-size: 14px
+    }
+
+    .auth-box p {
+        font-size: 14px;
+    }
+    
+    .input-group input {
+        padding-left: 36px;
+    }
+
+
 }
 
 
@@ -412,33 +378,40 @@ main {
 
     </div>
 
-<!--Contact-->
+<!--Sign in-->
 <main>
-    <div class="contact-section">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <div class="contact-input">
-                <form>
-                <p>Name :</p>
-                <input type="text" id="name">
-                </form>
+    <div class="auth-section">
+        <div class="auth-box">
+            <!--LOGO PLACEHOLDER-->
+            <div class="auth-logo">
+                <img src="Asset 2.png" alt="vestaro logo"/>
+                <h1 class="auth-logo-text">Welcome to Vestaro</h1>
             </div>
+            <h2 id="auth-title">Create Account</h2>
+            <form id="form">
 
-            <div class="contact-input">
-                <form>
-                <p>Email :</p>
-                <input type="email" id="email">
-                </form>
-            </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i> 
+                    <input type="text" placeholder="Enter your Full Name" required/>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i> 
+                    <input type="email" placeholder="Enter your email address" required/>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i> 
+                    <input type="password" placeholder="Enter your password" required/>    
+                </div>
 
-            <div class="contact-input">
-                <form>
-                <p>Message :</p>
-                <textarea name="text" id="message"></textarea>
-                </form>
-                <button class="submit-btn">Submit</button>
-            </div>
-            
+                <button type="submit" class="submit-button">Sign Up</button>        
+                <div class="divider"><span>Or</span></div>
+                <div class="social-login">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                </div>
+                <p class="login-link">Already have an account? <a href="signin.html">Sign In</a></p>
+            </form>
         </div>
     </div>
 </main>
